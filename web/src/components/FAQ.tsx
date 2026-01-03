@@ -1,5 +1,3 @@
-import React from 'react';
-
 const faqs = [
   {
     question: "¿Cuáles son los tiempos de entrega?",
@@ -22,11 +20,11 @@ export default function FAQ() {
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           Preguntas Frecuentes
         </h2>
-        
+
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <details 
-              key={index} 
+            <details
+              key={index}
               className="group bg-white rounded-xl border border-gray-200 p-6 [&_summary::-webkit-details-marker]:hidden"
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">

@@ -2,12 +2,18 @@
 
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
-type CartItem = { id: number; name: string; price: number; };
+type CartItem = {
+  id: number;
+  name: string;
+  price: number;
+  image: string; // <--- Agrega esta línea
+};
 
 interface CartContextType {
   items: CartItem[];
   addToCart: (item: CartItem) => void;
   removeFromCart: (index: number) => void;
+  clearCart: () => void; // <--- Agregado a la interfaz
   cartCount: number;
   cartTotal: number;
   isCartOpen: boolean;
@@ -21,7 +27,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // 1. CARGAR DATOS: Se ejecuta una sola vez al montar el componente
+  // 1. CARGAR DATOS
   useEffect(() => {
     const savedCart = localStorage.getItem('tote-cart');
     if (savedCart) {
@@ -33,12 +39,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  // 2. GUARDAR DATOS: Se ejecuta cada vez que 'items' cambia
+  // 2. GUARDAR DATOS
   useEffect(() => {
-    // Solo guardamos si hay cambios (evita borrar el carrito al inicio)
-    if (items.length >= 0) {
-      localStorage.setItem('tote-cart', JSON.stringify(items));
-    }
+    localStorage.setItem('tote-cart', JSON.stringify(items));
   }, [items]);
 
   const addToCart = (item: CartItem) => {
@@ -50,16 +53,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems((prev) => prev.filter((_, i) => i !== index));
   };
 
+  // 3. FUNCIÓN PARA LIMPIAR TODO
+  const clearCart = () => {
+    setItems([]);
+    localStorage.removeItem('tote-cart'); // Limpieza profunda del storage
+  };
+
   const cartTotal = items.reduce((total, item) => total + item.price, 0);
 
   return (
-    <CartContext.Provider value={{ 
-      items, 
-      addToCart, 
-      removeFromCart, 
-      cartCount: items.length, 
-      cartTotal, 
-      isCartOpen, 
+    <CartContext.Provider value={{
+      items,
+      addToCart,
+      removeFromCart,
+      clearCart, // <--- Expuesta en el provider
+      cartCount: items.length,
+      cartTotal,
+      isCartOpen,
       openCart: () => setIsCartOpen(true),
       closeCart: () => setIsCartOpen(false)
     }}>

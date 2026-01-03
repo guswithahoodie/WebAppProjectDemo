@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 const instaPosts = [
@@ -14,9 +13,9 @@ export default function InstagramFeed() {
         <h2 className="text-xl font-bold tracking-widest uppercase text-gray-900">
           Síguenos en Instagram
         </h2>
-        <a 
-          href="https://instagram.com/dualiteshop" 
-          target="_blank" 
+        <a
+          href="https://instagram.com/dualiteshop"
+          target="_blank"
           className="mt-2 block text-sm text-gray-500 hover:text-black transition italic"
         >
           @dualiteshop
@@ -24,10 +23,10 @@ export default function InstagramFeed() {
 
         <div className="mt-10 grid grid-cols-2 gap-2 md:grid-cols-4">
           {instaPosts.map((post) => (
-            <a 
-              key={post.id} 
-              href={post.link} 
-              target="_blank" 
+            <a
+              key={post.id}
+              href={post.link}
+              target="_blank"
               className="group relative aspect-square overflow-hidden bg-gray-100 block"
             >
               <Image

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function ContactoPage() {
   const shopEmail = "contact.dualiteshop@gmail.com";
   const shopPhone = "50671081671"; // Formato: código país + número
@@ -11,13 +9,13 @@ export default function ContactoPage() {
           Estamos para ayudarte
         </h1>
         <p className="text-lg text-gray-600 mb-12">
-          ¿Tienes alguna duda sobre tu pedido o quieres un diseño personalizado? 
+          ¿Tienes alguna duda sobre tu pedido o quieres un diseño personalizado?
           Escríbenos por cualquiera de nuestros canales oficiales.
         </p>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {/* Tarjeta WhatsApp */}
-          <a 
+          <a
             href={`https://wa.me/${shopPhone}`}
             target="_blank"
             className="flex flex-col items-center p-8 rounded-2xl bg-green-50 border border-green-100 hover:shadow-md transition"
@@ -28,7 +26,7 @@ export default function ContactoPage() {
           </a>
 
           {/* Tarjeta Email */}
-          <a 
+          <a
             href={`mailto:${shopEmail}`}
             className="flex flex-col items-center p-8 rounded-2xl bg-blue-50 border border-blue-100 hover:shadow-md transition"
           >

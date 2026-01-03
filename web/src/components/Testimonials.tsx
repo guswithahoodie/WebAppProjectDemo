@@ -1,5 +1,3 @@
-import React from 'react';
-
 const reviews = [
   {
     id: 1,
@@ -28,11 +26,11 @@ export default function Testimonials() {
         <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-16">
           Lo que dicen nuestras clientas
         </h2>
-        
+
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {reviews.map((review) => (
-            <div 
-              key={review.id} 
+            <div
+              key={review.id}
               className="flex flex-col justify-between rounded-2xl bg-gray-50 p-8 shadow-sm border border-gray-100"
             >
               <div>
@@ -45,7 +43,7 @@ export default function Testimonials() {
                   "{review.content}"
                 </p>
               </div>
-              
+
               <div className="mt-8">
                 <p className="font-bold text-gray-900">{review.author}</p>
                 <p className="text-sm text-gray-500">{review.role}</p>

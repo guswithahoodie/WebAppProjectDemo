@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AnnouncementBar() {
   return (
     <div className="bg-black py-2 px-4">

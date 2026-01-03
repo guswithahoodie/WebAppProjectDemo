@@ -19,9 +19,9 @@ export default function Navbar() {
     <>
       <nav className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          
+
           {/* LADO IZQUIERDO: Menú más grande */}
-          <button 
+          <button
             onClick={() => setIsMenuOpen(true)}
             className="p-3 text-gray-700 hover:text-black transition"
           >
@@ -39,14 +39,14 @@ export default function Navbar() {
           <div className="flex items-center">
             <button onClick={openCart} className="relative p-3 text-gray-700 hover:text-black transition">
               <span className="sr-only">Open cart</span>
-              
+
               {/* Nuevo SVG: Forma de Tote Bag */}
-              <svg 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg" 
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
                 className="w-9 h-9" // Aumentado de w-6 a w-9
-                stroke="currentColor" 
+                stroke="currentColor"
                 strokeWidth="1.2"
               >
                 {/* Las asas de la Tote Bag */}
@@ -79,8 +79,8 @@ export default function Navbar() {
 
             <nav className="mt-12 flex flex-col gap-8">
               {navLinks.map((link) => (
-                <Link 
-                  key={link.href} 
+                <Link
+                  key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="text-2xl font-bold tracking-tight text-gray-900 hover:italic transition-all"

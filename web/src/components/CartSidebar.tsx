@@ -1,34 +1,17 @@
 "use client";
 import { useCart } from "@/context/CartContext";
+import Link from 'next/link';
+import Image from 'next/image'; // Importamos Image para las miniaturas
 
 export default function CartSidebar() {
   const { items, cartTotal, isCartOpen, closeCart, removeFromCart } = useCart();
-
-  const handleCheckout = () => {
-    const phoneNumber = "50671081671"; // <--- Reemplaza con el número de tu novia (ej: 50688888888)
-    
-    // 1. Agrupamos los productos para que el mensaje sea legible
-    const itemsSummary = items.map(item => `- ${item.name} ($${item.price.toFixed(2)})`).join('\n');
-    
-    // 2. Creamos el mensaje
-    const message = `¡Hola! Me gustaría hacer un pedido:\n\n${itemsSummary}\n\n*Total: $${cartTotal.toFixed(2)}*\n\n¿Cómo podemos coordinar el pago y la entrega?`;
-    
-    // 3. Codificamos el mensaje para que sea válido en una URL
-    const encodedMessage = encodeURIComponent(message);
-    
-    // 4. Creamos el link de WhatsApp
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
-    // 5. Abrimos en una nueva pestaña
-    window.open(whatsappUrl, '_blank');
-  };
 
   if (!isCartOpen) return null;
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
       <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" onClick={closeCart} />
-      
+
       <div className="relative w-full max-w-md bg-white h-full shadow-2xl p-6 flex flex-col">
         <div className="flex justify-between items-center border-b pb-4">
           <h2 className="text-xl font-bold">Tu Carrito</h2>
@@ -42,14 +25,25 @@ export default function CartSidebar() {
             </div>
           ) : (
             items.map((item, index) => (
-              <div key={index} className="flex justify-between items-center py-4 border-b">
-                <div>
-                  <p className="font-bold text-gray-900">{item.name}</p>
-                  <p className="text-gray-600">${item.price.toFixed(2)}</p>
+              <div key={index} className="flex gap-4 items-center py-4 border-b">
+                {/* Miniatura del producto */}
+                <div className="relative w-16 h-16 flex-shrink-0 bg-gray-100 rounded-md overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <button 
+
+                <div className="flex-1">
+                  <p className="font-bold text-gray-900 text-sm">{item.name}</p>
+                  <p className="text-gray-600 text-sm">${item.price.toFixed(2)}</p>
+                </div>
+
+                <button
                   onClick={() => removeFromCart(index)}
-                  className="text-red-500 text-sm hover:underline"
+                  className="text-red-500 text-xs hover:underline"
                 >
                   Eliminar
                 </button>
@@ -63,22 +57,20 @@ export default function CartSidebar() {
             <span>Total</span>
             <span>${cartTotal.toFixed(2)}</span>
           </div>
-          
-          <button 
-            onClick={handleCheckout}
-            disabled={items.length === 0}
-            className={`w-full py-4 rounded-lg font-bold transition flex items-center justify-center gap-2 ${
-              items.length === 0 
-                ? 'bg-gray-300 cursor-not-allowed' 
-                : 'bg-green-600 text-white hover:bg-green-700'
-            }`}
+
+          <Link
+            href="/checkout"
+            onClick={closeCart}
+            className={`w-full py-4 rounded-lg font-bold transition flex items-center justify-center gap-2 ${items.length === 0
+                ? 'bg-gray-300 pointer-events-none'
+                : 'bg-black text-white hover:bg-gray-800'
+              }`}
           >
-            {/* Un pequeño icono de WhatsApp opcional */}
-            Continuar a WhatsApp
-          </button>
-          
+            Finalizar Compra
+          </Link>
+
           <p className="text-[10px] text-center text-gray-400 mt-3 uppercase tracking-widest">
-            Pago y envío se coordinan por chat
+            Revisarás detalles de SINPE en el siguiente paso
           </p>
         </div>
       </div>

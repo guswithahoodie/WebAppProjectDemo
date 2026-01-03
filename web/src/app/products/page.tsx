@@ -31,9 +31,9 @@ export default function ProductosPage() {
       </div>
 
       {selectedProduct && (
-        <ProductModal 
-          product={selectedProduct} 
-          onClose={() => setSelectedProduct(null)} 
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
           onAddToCart={addToCart}
         />
       )}
