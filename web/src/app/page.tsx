@@ -9,7 +9,7 @@ export default function Home() {
       {/* Hero simple */}
       <header className="mb-12 text-center">
         <p className="mt-10 text-lg text-gray-500">
-          Minimalist designs for everyday carry.
+          Minimalist designs for everyday.
         </p>
       </header>
 

@@ -7,7 +7,7 @@ const reviews = [
   },
   {
     id: 2,
-    content: "Buscaba algo minimalista y este producto es perfecta. El detalle de las costuras se nota que es hecho a mano con mucho cuidado.",
+    content: "Buscaba algo minimalista y este producto es perfecto. El detalle de las costuras se nota que es hecho a mano con mucho cuidado.",
     author: "Lucía M.",
     role: "Cliente verificada"
   },
