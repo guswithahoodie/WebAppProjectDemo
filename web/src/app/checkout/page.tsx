@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 import Link from 'next/link';
 import Image from 'next/image'; // Importante para las fotos
+import { SHOP_CONFIG } from '@/constants/config';
+
+const { phone, phoneFormatted, instagram } = SHOP_CONFIG.contact;
+const { number: sinpeNumber, owner: sinpeOwner } = SHOP_CONFIG.sinpe;
 
 export default function CheckoutPage() {
   const { items, cartTotal, clearCart } = useCart();
@@ -18,7 +22,6 @@ export default function CheckoutPage() {
   }
 
   const handleWhatsAppRedirect = () => {
-    const phone = "50671081671";
     const rawMessage = `¡Hola! Acabo de realizar un SINPE para el pedido #TB-${orderId}.\n\n` +
       `*Detalles:*\n${items.map(item => `- ${item.name}`).join('\n')}\n\n` +
       `*Total:* $${cartTotal.toFixed(2)}`;
@@ -68,8 +71,8 @@ export default function CheckoutPage() {
             <div className="space-y-4 text-sm text-gray-700">
               <div className="bg-blue-50 p-4 rounded-lg">
                 <p className="font-bold text-blue-900 text-xs uppercase tracking-wider">Número SINPE Móvil:</p>
-                <p className="text-2xl font-mono text-blue-700 font-bold">7108-1671</p>
-                <p className="mt-1 font-medium text-blue-800 italic">A nombre de: Dualité Shop</p>
+                <p className="text-2xl font-mono text-blue-700 font-bold">{sinpeNumber}</p>
+                <p className="mt-1 font-medium text-blue-800 italic">A nombre de: {sinpeOwner}</p>
               </div>
 
               <div className="space-y-2 leading-relaxed">

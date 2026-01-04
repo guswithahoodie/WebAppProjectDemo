@@ -6,12 +6,13 @@ import Navbar from "@/components/Navbar";
 import CartSidebar from "@/components/CartSidebar";
 import Footer from "@/components/Footer";
 import AnnouncementBar from "@/components/AnnouncementBar";
+import { SHOP_CONFIG } from '@/constants/config';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tote Bag Shop",
-  description: "Minimalist Tote Bags",
+  title: SHOP_CONFIG.name,
+  description: "Minimalist Designs",
 };
 
 export default function RootLayout({

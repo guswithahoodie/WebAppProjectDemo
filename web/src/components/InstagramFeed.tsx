@@ -1,4 +1,8 @@
 import Image from 'next/image';
+import { SHOP_CONFIG } from '@/constants/config';
+
+const { instagram } = SHOP_CONFIG.contact;
+const { instagramUser } = SHOP_CONFIG.contact
 
 const instaPosts = [
   { id: 1, image: "/tote-1.JPG", link: "https://www.instagram.com/p/DSgpjvrjGg0/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
@@ -14,11 +18,11 @@ export default function InstagramFeed() {
           Síguenos en Instagram
         </h2>
         <a
-          href="https://instagram.com/dualiteshop"
+          href={instagram}
           target="_blank"
           className="mt-2 block text-sm text-gray-500 hover:text-black transition italic"
         >
-          @dualiteshop
+          {instagramUser}
         </a>
 
         <div className="mt-10 grid grid-cols-2 gap-2 md:grid-cols-4">

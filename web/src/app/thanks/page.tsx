@@ -7,10 +7,10 @@ export default function ThanksPage() {
     <main className="min-h-screen flex flex-col items-center pt-20 p-6 text-center bg-white">
       <div className="max-w-md">
         <span className="text-6xl">✨</span>
-        <h1 className="text-4xl font-bold mt-6 mb-4 italic">¡Muchas Gracias!</h1>
+        <h1 className="text-4xl font-bold mt-6 mb-4">¡Muchas Gracias!</h1>
         <p className="text-gray-600 mb-8">
           Hemos recibido tu notificación. En cuanto confirmemos el SINPE,
-          empezaremos a preparar tu pedido con todo el amor de Dualité Shop.
+          empezaremos a preparar tu pedido.
         </p>
 
         <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 mb-8">

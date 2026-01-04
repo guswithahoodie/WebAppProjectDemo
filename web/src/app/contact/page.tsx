@@ -1,7 +1,9 @@
-export default function ContactoPage() {
-  const shopEmail = "contact.dualiteshop@gmail.com";
-  const shopPhone = "50671081671"; // Formato: código país + número
+import { SHOP_CONFIG } from '@/constants/config';
 
+const { phone } = SHOP_CONFIG.contact;
+const { email } = SHOP_CONFIG.contact;
+
+export default function ContactoPage() {
   return (
     <main className="min-h-screen bg-white py-20 px-4">
       <div className="max-w-3xl mx-auto text-center">
@@ -16,7 +18,7 @@ export default function ContactoPage() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {/* Tarjeta WhatsApp */}
           <a
-            href={`https://wa.me/${shopPhone}`}
+            href={`https://wa.me/${phone}`}
             target="_blank"
             className="flex flex-col items-center p-8 rounded-2xl bg-green-50 border border-green-100 hover:shadow-md transition"
           >
@@ -27,12 +29,12 @@ export default function ContactoPage() {
 
           {/* Tarjeta Email */}
           <a
-            href={`mailto:${shopEmail}`}
+            href={`mailto:${email}`}
             className="flex flex-col items-center p-8 rounded-2xl bg-blue-50 border border-blue-100 hover:shadow-md transition"
           >
             <span className="text-4xl mb-4">✉️</span>
             <h2 className="text-xl font-bold text-blue-900">Correo Electrónico</h2>
-            <p className="text-blue-700 text-sm mt-2">{shopEmail}</p>
+            <p className="text-blue-700 text-sm mt-2">{email}</p>
           </a>
         </div>
 

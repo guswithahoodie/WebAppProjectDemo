@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { SHOP_CONFIG } from '@/constants/config';
 
 export default function AboutUs() {
   return (
@@ -22,7 +23,7 @@ export default function AboutUs() {
               Hecho a mano, pensado para ti
             </h2>
             <p className="mt-6 text-lg text-gray-600 leading-8">
-              Tote Bag Shop nació de la búsqueda de la bolsa perfecta: simple, resistente y con estilo.
+              {SHOP_CONFIG.name} nació de la búsqueda de la bolsa perfecta: simple, resistente y con estilo.
               Cada pieza es diseñada y confeccionada artesanalmente, cuidando cada detalle
               desde la selección de la lona hasta la última costura.
             </p>

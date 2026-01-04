@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
+import { SHOP_CONFIG } from '@/constants/config';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +33,7 @@ export default function Navbar() {
 
           {/* CENTRO: Logo */}
           <Link href="/" className="text-xl font-bold tracking-tight text-black absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
-            TOTE BAG SHOP
+            {SHOP_CONFIG.name}
           </Link>
 
           {/* LADO DERECHO: ÍCONO DE TOTE BAG GRANDE */}

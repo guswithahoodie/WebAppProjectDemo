@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import { SHOP_CONFIG } from '@/constants/config';
 
 export default function Footer() {
-  const shopEmail = "contact.dualiteshop@gmail.com";
-  const shopPhone = "50671081671";
+  const { email } = SHOP_CONFIG.contact;
+  const { phone } = SHOP_CONFIG.contact;
+  const { instagram } = SHOP_CONFIG.contact;
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
@@ -11,7 +13,7 @@ export default function Footer() {
 
           {/* Logo y Descripción */}
           <div className="text-center md:text-left">
-            <h2 className="text-xl font-bold tracking-tight text-black uppercase">TOTE BAG SHOP</h2>
+            <h2 className="text-xl font-bold tracking-tight text-black uppercase">{SHOP_CONFIG.name}</h2>
             <p className="mt-4 text-sm text-gray-500 max-w-xs leading-relaxed">
               Diseños minimalistas y funcionales hechos con amor para tu día a día.
               Confección artesanal desde Costa Rica.
@@ -22,7 +24,7 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <span className="text-sm font-bold text-gray-900 uppercase tracking-widest">Explorar</span>
             <ul className="mt-4 space-y-2 text-sm text-gray-600">
-              <li><Link href="/products" className="hover:text-black transition">Nuestras Totes</Link></li>
+              <li><Link href="/products" className="hover:text-black transition">Nuestras Productos</Link></li>
               <li><Link href="/faq" className="hover:text-black transition">Preguntas Frecuentes</Link></li>
               <li><Link href="/contact" className="hover:text-black transition">Contacto</Link></li>
             </ul>
@@ -35,7 +37,7 @@ export default function Footer() {
 
               {/* Botones redondos más modernos y compactos */}
               <a
-                href={`https://wa.me/${shopPhone}`}
+                href={`https://wa.me/${phone}`}
                 target="_blank"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm hover:bg-green-50 transition"
                 title="WhatsApp"
@@ -44,7 +46,7 @@ export default function Footer() {
               </a>
 
               <a
-                href={`mailto:${shopEmail}`}
+                href={`mailto:${email}`}
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm hover:bg-blue-50 transition"
                 title="Correo"
               >
@@ -52,7 +54,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.instagram.com/dualiteshop/"
+                href={instagram}
                 target="_blank"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm hover:bg-pink-50 transition"
                 title="Instagram"
@@ -66,7 +68,7 @@ export default function Footer() {
         {/* Línea final */}
         <div className="mt-12 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-400">
-            © {new Date().getFullYear()} Tote Bag Shop. Todos los derechos reservados.
+            © {new Date().getFullYear()} {SHOP_CONFIG.name}. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-4">
             <span className="text-[10px] font-bold text-gray-300 tracking-widest">HANDMADE IN COSTA RICA</span>
