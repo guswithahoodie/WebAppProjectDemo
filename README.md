@@ -1,4 +1,4 @@
-# Dualité Shop - E-commerce Platform 🇨🇷
+# Tote Bags Shop - E-commerce Platform 🇨🇷
 
 A high-performance, mobile-first e-commerce application tailored for the Costa Rican market. Built with a focus on Site Reliability Engineering (SRE) principles: scalability, clean state management, and seamless user experience.
 
