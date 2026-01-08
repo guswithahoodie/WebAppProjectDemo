@@ -19,7 +19,28 @@ This project follows a decoupled architecture to allow for future migrations.
 - **User Experience:** Encoded URI strings for WhatsApp integration to reduce customer friction.
 - **Scalability:** Container-ready structure for GCP deployment.
 
-## 🛠️ Installation & Setup
-1. Clone the repository: `git clone [your-repo-link]`
-2. Install dependencies: `npm install`
-3. Run development server: `npm run dev`
+## Home Page:
+![Home Page 1](../github_screenshots/home1.png)
+![Home Page 2](../github_screenshots/home2.png)
+![Home Page 3](../github_screenshots/home3.png)
+
+## Hamburger Menu
+![Hamburger Menu](../github_screenshots/hamburger.png)
+
+## Products section
+![Products Section](../github_screenshots/products.png)
+
+## Shopping Bag
+![Shopping Bag](../github_screenshots/shoppingbag.png)
+
+## Checkout
+![Checkout](../github_screenshots/checkout.png)
+
+## Thank You
+![Thank You](../github_screenshots/thanksforshopping.png)
+
+## FAQ
+![FAQ](../github_screenshots/faq.png)
+
+## Contact
+![Contact](../github_screenshots/contact.png)
