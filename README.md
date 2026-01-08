@@ -33,7 +33,7 @@ This project follows a decoupled architecture to allow for future migrations.
 ## Shopping Bag:
 ![Shopping Bag](./github_screenshots/cart.png)
 
-## Checkout:
+## Checkout (Temporary):
 ![Checkout](./github_screenshots/checkout.png)
 
 ## Thank You:
