@@ -31,7 +31,7 @@ This project follows a decoupled architecture to allow for future migrations.
 ![Products Section](./github_screenshots/products.png)
 
 ## Shopping Bag
-![Shopping Bag](./github_screenshots/shoppingbag.png)
+![Shopping Bag](./github_screenshots/cart.png)
 
 ## Checkout
 ![Checkout](./github_screenshots/checkout.png)
