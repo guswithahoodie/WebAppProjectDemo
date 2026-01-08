@@ -20,7 +20,7 @@ This project follows a decoupled architecture to allow for future migrations.
 - **Scalability:** Container-ready structure for GCP deployment.
 
 ## Home Page:
-![Home Page 1](../github_screenshots/home1.png)
+![Home Page 1](./github_screenshots/home1.png)
 ![Home Page 2](../github_screenshots/home2.png)
 ![Home Page 3](../github_screenshots/home3.png)
 
