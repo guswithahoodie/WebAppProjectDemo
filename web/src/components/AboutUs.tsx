@@ -35,7 +35,7 @@ export default function AboutUs() {
             {/* Un pequeño detalle de firma o frase */}
             <div className="mt-10">
               <p className="font-serif italic text-xl text-gray-900">
-                — Con amor, la creadora.
+                — Con amor.
               </p>
             </div>
           </div>

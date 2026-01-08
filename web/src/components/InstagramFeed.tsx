@@ -5,7 +5,7 @@ const { instagram } = SHOP_CONFIG.contact;
 const { instagramUser } = SHOP_CONFIG.contact
 
 const instaPosts = [
-  { id: 1, image: "/tote-1.JPG", link: "https://www.instagram.com/p/DSgpjvrjGg0/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
+  /// { id: 1, image: "/tote-1.JPG", link: "https://www.instagram.com/p/DSgpjvrjGg0/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
   { id: 3, image: "/tote-3.JPG", link: "https://www.instagram.com/p/DQr0k41Dyqt/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
   { id: 4, image: "/tote-4.JPG", link: "https://www.instagram.com/p/DQrqH9gDifs/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
 ];

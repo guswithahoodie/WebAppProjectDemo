@@ -16,7 +16,7 @@ export default function Newsletter() {
     <section className="bg-black text-white py-16">
       <div className="mx-auto max-w-7xl px-4 text-center">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-          ¿Quieres ser la primera en saber?
+          ¿Quieres ser el primero en saber?
         </h2>
         <p className="mt-4 text-gray-400">
           Suscríbete para recibir alertas de nuevos lanzamientos y stock disponible.

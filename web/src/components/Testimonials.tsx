@@ -14,8 +14,8 @@ const reviews = [
   {
     id: 3,
     content: "El envío fue súper rápido y la atención por WhatsApp de lo mejor. Definitivamente voy a comprar otro color.",
-    author: "Camila R.",
-    role: "Cliente verificada"
+    author: "Camilo R.",
+    role: "Cliente verificado"
   }
 ];
 

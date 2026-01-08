@@ -9,7 +9,7 @@ export default function ProductosPage() {
   const { addToCart } = useCart();
 
   const products = [
-    { id: 1, name: "Sunset Tote", price: 25.00, image: "/tote-1.JPG", badge: "Best Seller", description: "...", details: "...", care: "..." },
+    /// { id: 1, name: "Sunset Tote", price: 25.00, image: "/tote-1.JPG", badge: "Best Seller", description: "...", details: "...", care: "..." },
     { id: 2, name: "Ocean Breeze", price: 28.50, image: "/tote-2.JPG", description: "...", details: "...", care: "..." },
     { id: 3, name: "Forest Walk", price: 22.00, image: "/tote-3.JPG", description: "...", details: "...", care: "..." },
     { id: 4, name: "Midnight Shopper", price: 30.00, image: "/tote-4.JPG", description: "...", details: "...", care: "..." },

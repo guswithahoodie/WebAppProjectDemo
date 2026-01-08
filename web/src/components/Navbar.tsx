@@ -32,7 +32,7 @@ export default function Navbar() {
           </button>
 
           {/* CENTRO: Logo */}
-          <Link href="/" className="text-xl font-bold tracking-tight text-black absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
+          <Link href="/" className="text-4xl font-bold tracking-tight text-black absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
             {SHOP_CONFIG.name}
           </Link>
 

@@ -1,16 +1,16 @@
 export const SHOP_CONFIG = {
-  name: "Dualité",
-  owner: "Anyoleth Venegas",
+  name: "Tote Bags Shop",
+  owner: "owner_name",
   contact: {
-    phone: "50671081671",
-    phoneFormatted: "7108-1671",
-    email: "contact.dualiteshop@gmail.com",
-    instagram: "https://www.instagram.com/dualiteshop", // Reemplaza con el real
-    instagramUser: "@dualiteshop",
+    phone: "contact_phone_with_country_code",
+    phoneFormatted: "contacnt_phone_local",
+    email: "contact_email",
+    instagram: "instagram_url", // Reemplaza con el real
+    instagramUser: "@instagram_user",
   },
   sinpe: {
-    number: "7108-1671",
-    owner: "Gustavo Enrique Rois Mendez Ramirez",
+    number: "sinpe_number",
+    owner: "sinpe_owner",
   },
   shipping: {
     freeThreshold: 50, // En dólares
