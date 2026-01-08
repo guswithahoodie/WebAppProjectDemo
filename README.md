@@ -24,23 +24,23 @@ This project follows a decoupled architecture to allow for future migrations.
 ![Home Page 2](./github_screenshots/home2.png)
 ![Home Page 3](./github_screenshots/home3.png)
 
-## Hamburger Menu
+## Hamburger Menu:
 ![Hamburger Menu](./github_screenshots/hamburger.png)
 
-## Products section
+## Products section:
 ![Products Section](./github_screenshots/products.png)
 
-## Shopping Bag
+## Shopping Bag:
 ![Shopping Bag](./github_screenshots/cart.png)
 
-## Checkout
+## Checkout:
 ![Checkout](./github_screenshots/checkout.png)
 
-## Thank You
+## Thank You:
 ![Thank You](./github_screenshots/thanksforshopping.png)
 
-## FAQ
+## FAQ:
 ![FAQ](./github_screenshots/faq.png)
 
-## Contact
+## Contact:
 ![Contact](./github_screenshots/contact.png)
